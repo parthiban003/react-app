@@ -37,7 +37,6 @@ const Content = () => {
 
   return (
     <main>
-      {(items.length)?(
       <ul>
         {items.map((item) => (
           <li className='item' key={item.id}>
@@ -55,10 +54,6 @@ const Content = () => {
           </li>
         ))}
       </ul>
-      ) : (
-        <h3 style={{marginTop:'2rem'}}>Your List is Emty</h3>
-      )
-    }
     </main>
   )
 }

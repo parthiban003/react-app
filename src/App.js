@@ -14,15 +14,15 @@ import Effect2 from './Effect2';
 function App() {
 
   return (
-    <div className='App'>
-      <Header/>
-      <Content/>
+    <div>
+      <Header />
+      <Content />
       <Hook/>
       <Effect/>
       <Ref/>
-      <Form/>
+      <Form/><br />
       <Effect2/>
-      <Leyout/>
+      <Leyout/><br />
       <Footer/>
       
     </div>
