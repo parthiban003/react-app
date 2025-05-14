@@ -1,18 +1,19 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 
 const Ref = () => {
   const [name, setName] = useState('');
-  const [cout, setCount] = useState('0');
+  const count = useRef(0);
+  console.log(count);
 
-  useEffect (() =>{
-    setCount((prev) => prev + 1);
-  });
-
+   useEffect(() => {
+    count.current = count.current + 1;
+   });
 
   return (
     <div>
-      <input type="text" onChange={(e) => setName(e.target.valu)}/>
+      <input type="text" onChange={(e) => setName(e.target.value)}/>
       <h2>Name: {name}</h2>
+      <h2>Renders: {count.current}</h2>
     </div>
   )
 }
